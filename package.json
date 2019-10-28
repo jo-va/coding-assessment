@@ -1,0 +1,45 @@
+{
+  "name": "rest-api-example",
+  "version": "1.0.0",
+  "description": "REST API example",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node exercise-3-rest-api/index.js",
+    "build": "babel exercise-3-rest-api --out-dir dist",
+    "serve": "node dist/index.js",
+    "test:dev": "jest --watch",
+    "test:multiply": "jest exercise-1-multiply",
+    "test:api": "jest exercise-3-rest-api --runInBand --testTimeout=10000 --forceExit"
+  },
+  "keywords": [],
+  "author": "Jonathan Vandamme",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/runtime": "^7.6.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "pg": "^7.12.1",
+    "sequelize": "^5.21.1",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/node": "^7.6.3",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.6.3",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.4",
+    "prettier": "^1.18.2",
+    "supertest": "^4.0.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/dist/"
+    ]
+  }
+}
